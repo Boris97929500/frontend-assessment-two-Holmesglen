@@ -19,6 +19,14 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: 360,
         backgroundColor: theme.palette.background.paper,
     },
+    fontStyle: {
+        display: 'flex',
+        justifyContent: 'center',
+        margin: '2rem',
+        },
+    imageStyle: {
+        width: '100%',
+    }
 }));
 
 function ListItemLink(props) {
@@ -31,30 +39,36 @@ export default function SimpleList() {
     return (
         <div>
             <Navbar />
-            <div className={classes.root}>
-                <List component="nav" aria-label="main mailbox folders">
-                    <ListItem button>
-                        <ListItemIcon>
-                            <InboxIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Inbox" />
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemIcon>
-                            <DraftsIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Drafts" />
-                    </ListItem>
-                </List>
-                <Divider />
-                <List component="nav" aria-label="secondary mailbox folders">
-                    <ListItem button>
-                        <ListItemText primary="Trash" />
-                    </ListItem>
-                    <ListItemLink href="#simple-list">
-                        <ListItemText primary="Spam" />
-                    </ListItemLink>
-                </List>
+            <div className={classes.fontStyle}>
+                <div className={classes.root}>
+                    <List component="nav" aria-label="main mailbox folders">
+                        <ListItem button>
+                            <ListItemIcon>
+                                <InboxIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Inbox" />
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemIcon>
+                                <DraftsIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Drafts" />
+                        </ListItem>
+                    </List>
+                    <Divider />
+                    <List component="nav" aria-label="secondary mailbox folders">
+                        <ListItem button>
+                            <ListItemText primary="Trash" />
+                        </ListItem>
+                        <ListItemLink href="#simple-list">
+                            <ListItemText primary="Spam" />
+                        </ListItemLink>
+                    </List>
+                </div>
+                
+            </div>
+            <div>
+                <img className={classes.imageStyle} src="./image/home.jpg" alt="imageForTable"></img>
             </div>
             <Footer />
         </div>

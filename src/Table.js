@@ -2,20 +2,6 @@
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-// export default function Table() {
-//     return (
-//         <div>
-//             <Navbar />
-//             <div>
-//                 <img className={classes.imageStyle} src="./image/form.jpg" alt="imageForShopping"></img>
-//             </div>
-//             <div className={classes.fontStyle}>
-
-//             </div>
-//             <Footer />
-//         </div>
-//     )
-// }
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
@@ -35,6 +21,7 @@ const useStyles = makeStyles({
   fontStyle: {
     display: 'flex',
     justifyContent: 'center',
+    margin: '2rem',
     },
     imageStyle: {
         width: '100%',
@@ -59,9 +46,6 @@ export default function BasicTable() {
   return (
     <div>
         <Navbar />
-        <div>
-            <img className={classes.imageStyle} src="./image/table.jpg" alt="imageForTable"></img>
-        </div>
         <div className={classes.fontStyle}>
                 <TableContainer component={Paper}>
             <Table className={classes.table} aria-label="simple table">
@@ -89,6 +73,9 @@ export default function BasicTable() {
                 </TableBody>
             </Table>
             </TableContainer>
+        </div>
+        <div>
+            <img className={classes.imageStyle} src="./image/table.jpg" alt="imageForTable"></img>
         </div>
         <Footer />
     </div>

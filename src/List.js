@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
   fontStyle: {
     display: 'flex',
     justifyContent: 'center',
+    margin: '2rem',
     },
     imageStyle: {
         width: '100%',
@@ -57,9 +58,6 @@ export default function InteractiveList() {
   return (
     <div>
         <Navbar />
-            <div>
-                <img className={classes.imageStyle} src="./image/spare.jpg" alt="imageForShopping"></img>
-            </div>
         <div className={classes.fontStyle}>
             <div className={classes.root}>
         <FormGroup row>
@@ -279,6 +277,9 @@ export default function InteractiveList() {
             </Grid>
         </Grid>
         </div>
+        </div>
+        <div>
+                <img className={classes.imageStyle} src="./image/spare.jpg" alt="imageForShopping"></img>
         </div>
         <Footer />
     </div>

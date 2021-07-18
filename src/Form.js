@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     fontStyle: {
         display: 'flex',
         justifyContent: 'center',
+        margin: '2rem',
     },
     imageStyle: {
         width: '100%',
@@ -30,9 +31,6 @@ export default function Form() {
     return (
         <div>
             <Navbar />
-            <div>
-                <img className={classes.imageStyle} src="./image/form.jpg" alt="imageForShopping"></img>
-            </div>
             <div className={classes.fontStyle}>
                 <form className={classes.root} noValidate autoComplete="off">
                     <div>
@@ -82,8 +80,9 @@ export default function Form() {
                 </form>
             </div>
             <div>
-                <Footer />
+                <img className={classes.imageStyle} src="./image/form.jpg" alt="imageForShopping"></img>
             </div>
+            <Footer />
         </div>
 
     );
