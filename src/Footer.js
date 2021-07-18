@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { blue } from '@material-ui/core/colors';
 
 const useStyles = makeStyles((theme) => ({
 
@@ -20,8 +19,8 @@ export default function Footer() {
     return (
         <div className={classes.footer}>
             <footer>
-                <a className={classes.footerIcon} href="https://www.facebook.com"><img src="../image/facebook_icon.png" /></a>
-                <a className={classes.footerIcon}  href="https://twitter.com/?lang=en"><img src="../image/twitter_icon.png" /></a>
+                <a className={classes.footerIcon} href="https://www.facebook.com"><img src="../image/facebook_icon.png" alt="facebookLink"/></a>
+                <a className={classes.footerIcon}  href="https://twitter.com/?lang=en"><img src="../image/twitter_icon.png" alt="twitterLink" /></a>
                 
             </footer>
 
