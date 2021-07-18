@@ -25,6 +25,10 @@ const useStyles = makeStyles((theme) => ({
         padding: "0 1.1rem",
         fontWeight: "500",
         fontFamily: "Roboto, Helvetica, Arial, sans-serif"
+    },
+    logo: {
+        width: "6rem",
+        padding: "8px 0 0 0",
     }
 }));
 
@@ -39,7 +43,7 @@ export default function Navbar() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" className={classes.title}>
-                        Moochi
+                        <Link  to="/"><img className={classes.logo} src="./image/logo.jpg" alt="brandlogo"></img></Link>
                     </Typography>
                     <Link className={classes.navlink} to="/form">Form</Link>
                     <Link className={classes.navlink} to="/list">List</Link>
